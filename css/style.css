@@ -182,6 +182,8 @@ h3 {
 }
 
 .img {
+  width: 100%;
+  height: auto;
   border-radius: 0.75rem;
 }
 
@@ -205,6 +207,7 @@ h3 {
   background: var(--gray);
 }
 
+/* section banner */
 .content-box {
   display: flex;
   flex-direction: column;
@@ -234,6 +237,7 @@ h3 {
   height: 7rem;
 }
 
+/* footer */
 footer {
   display: flex;
   margin: 0 auto;
@@ -286,4 +290,52 @@ footer {
 
 a {
   color: var(--gray200);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container, .bottom .container {
+    width: 90%;
+    left: 5%;
+  }
+  .section, .nav-bottom {
+    width: 90%;
+    padding: 8.625rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .bottom .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-box, .bottom .container-box {
+    width: 80%;
+  }
+  .text p, .text-box p {
+    font-size: 2rem;
+  }
+  .main-btn, .font {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text p, .text-box p {
+    font-size: 1.5rem;
+  }
+  .main-btn, .font {
+    font-size: 0.875rem;
+  }
+  .container-box, .bottom .container-box {
+    width: 100%;
+  }
+  .text-box p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .text-box .info {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
