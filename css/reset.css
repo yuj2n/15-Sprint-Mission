@@ -1,11 +1,12 @@
-
 /* 전체 초기화 */
 * {
+  top: 0;
+  bottom: 0;
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: 'Pretendard Variable', sans-serif;
+  font-family: "Pretendard Variable", sans-serif;
 }
 
 /* 기본 스타일 초기화 */
@@ -13,19 +14,95 @@ a {
   text-decoration: none;
 }
 
-.main-btn, button {
+.main-btn,
+button {
   cursor: pointer;
 }
 
-.main-btn:hover, button:hover {
+.main-btn:hover,
+button:hover {
   background: var(--blue200);
 }
 
-.main-btn:active, button:active {
+.main-btn:active,
+button:active {
   background: var(--blue300);
 }
 
-.main-btn:disabled, button:disabled {
+.main-btn:disabled,
+button:disabled {
   background: var(--inactive);
 }
 
+/* 반응형 */
+@media (min-width: 120rem) { /* 1920px 이상일 때 */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--gray); /* 원하는 배경색 */
+    z-index: -1;
+  }
+
+  .nav, .banner, .section {
+    width: 100%;
+    background-color: var(--white); /* 해당 섹션의 배경색 */
+  }
+
+  .footer {
+    width: 100%;
+    background-color: var(--gray900); 
+  }
+}
+
+@media (max-width: 119.99rem) { /* 1920px 미만일 때 */
+  .nav {
+    width: 100%;
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 400px); /* 200px + 200px 여백 유지 */
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin-left: 200px;
+  }
+
+  .login {
+    margin-right: 200px;
+  }
+
+  /* 화면이 더 작아질 때 내부 간격이 점점 좁아지도록 조정 */
+  @media (max-width: 80rem) { /* 1280px 이하 */
+    .logo {
+      margin-left: 100px;
+    }
+    .login {
+      margin-right: 100px;
+    }
+  }
+
+  @media (max-width: 60rem) { /* 960px 이하 */
+    .logo {
+      margin-left: 50px;
+    }
+    .login {
+      margin-right: 50px;
+    }
+  }
+
+  @media (max-width: 40rem) { /* 640px 이하 */
+    .logo {
+      margin-left: 20px;
+    }
+    .login {
+      margin-right: 20px;
+    }
+  }
+}

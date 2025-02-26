@@ -1,16 +1,16 @@
 .nav {
   background: var(--white);
-  width: 120rem;
+  width: 100%;
   height: 4.375rem;
   margin: 0 auto;
-  padding: 0.56rem 25rem;
+  padding: 0.56rem 10%;
   gap: 0.625rem;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid var(--nav);
 }
 
 .nav-content {
   display: flex;
-  width: 70rem;
+  width: 100%;
   height: 3.18rem;
   margin: 0 auto;
   justify-content: space-between;
@@ -37,31 +37,40 @@
 section {
   background: var(--white);
   margin: 0 auto;
-  width: 120rem;
+  width: 100%;
   height: 45rem;
   top: 4.375rem;
 }
 
-.banner {
-  width: 120rem;
+article {
+  background: var(--banner);
+  margin: 0 auto;
+  width: 100%;
   height: 33.75rem;
-  background: #cfe5ff;
+}
+
+.banner {
+  width: 100%;
+  height: 33.75rem;
+  background: var(--banner);
 }
 
 .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 69.375rem;
+  width: 80%;
   height: 21.25rem;
   top: 12.5rem;
-  left: 25.31rem;
+  left: 10%;
   gap: 0.44rem;
 }
 
 .container-box {
   display: flex;
   flex-direction: column;
-  width: 22.31rem;
+  width: 30%;
   height: 16.25rem;
   gap: 2rem;
   padding-bottom: 3.75rem;
@@ -77,7 +86,7 @@ section {
 .main-btn {
   display: flex;
   background: var(--blue100);
-  width: 22.31rem;
+  width: 22.3rem;
   height: 3.5rem;
   gap: 0.625rem;
   padding: 1rem 7.75rem;
@@ -93,13 +102,13 @@ section {
 }
 
 .section {
-  padding: 8.625rem 29.125rem;
+  padding: 8.625rem 10%;
 }
 
 .content {
   background: var(--gray);
   display: flex;
-  width: 61.75rem;
+  width: 80%;
   height: 27.75rem;
   margin: 0 auto;
   border-radius: 0.75rem;
@@ -111,7 +120,7 @@ section {
 .content-box {
   display: flex;
   flex-direction: column;
-  width: 18.625rem;
+  width: 30%;
   height: 14.875rem;
   padding-right: 1.5rem;
   gap: 0.75rem;
@@ -127,13 +136,13 @@ h3 {
 .text-box {
   display: flex;
   flex-direction: column;
-  width: 17.125rem;
+  width: 100%;
   height: 12.5rem;
   gap: 1.5rem;
 }
 
 .text-box p {
-  width: 13.875rem;
+  width: 100%;
   height: 7rem;
   color: var(--gray700);
   font-weight: 700;
@@ -144,7 +153,7 @@ h3 {
 
 .text-box .info {
   color: var(--gray700);
-  width: 17.125rem;
+  width: 100%;
   height: 4rem;
   font-weight: 500;
   font-size: 1.5rem;
@@ -152,17 +161,17 @@ h3 {
 }
 
 .reverse .text-box {
-  width: 18.3rem;
+  width: 100%;
   height: 12.5rem;
 }
 
 .reverse p {
-  width: 18.3rem;
+  width: 100%;
   height: 7rem;
 }
 
 .reverse .info {
-  width: 18rem;
+  width: 100%;
 }
 
 .img {
@@ -170,17 +179,17 @@ h3 {
 }
 
 .register .content-box {
-  width: 22.4rem;
+  width: 30%;
   height: 14.875rem;
 }
 
 .register p {
-  width: 18.31rem;
+  width: 100%;
   height: 7rem;
 }
 
 .register .info {
-  width: 21rem;
+  width: 100%;
   height: 4rem;
 }
 
@@ -196,7 +205,7 @@ h3 {
 .content-box {
   display: flex;
   flex-direction: column;
-  width: 19.9rem;
+  width: 30%;
   height: 14.875rem;
   padding-right: 1.5rem;
   gap: 0.75rem;
@@ -204,8 +213,8 @@ h3 {
 
 .bottom .container {
   top: 8.93rem;
-  left: 25.3rem;
-  width: 69.375rem;
+  left: 10%;
+  width: 80%;
   height: 24.8rem;
   gap: 4.3rem;
 }
@@ -213,7 +222,7 @@ h3 {
 .bottom .container-box {
   display: flex;
   top: 0;
-  width: 18.5rem;
+  width: 30%;
   height: 10.75rem;
   padding-bottom: 3.75rem;
   gap: 0.625rem;
@@ -227,20 +236,19 @@ h3 {
 footer {
   display: flex;
   margin: 0 auto;
-  width: 120rem;
+  width: 100%;
   height: 10rem;
   color: var(--gray200);
   background-color: var(--gray900);
 }
 
 .nav-bottom {
-  width: 70rem;
+  width: 80%;
   height: 1.2rem;
   margin: 0 auto;
   padding-top: 2.5rem;
   display: flex;
   justify-content: space-between;
- 
 }
 
 .left {
@@ -277,4 +285,44 @@ footer {
 
 a {
   color: var(--gray200);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container, .bottom .container {
+    width: 90%;
+    left: 5%;
+  }
+  .section, .nav-bottom {
+    width: 90%;
+    padding: 8.625rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .bottom .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-box, .bottom .container-box {
+    width: 80%;
+  }
+  .text p, .text-box p {
+    font-size: 2rem;
+  }
+  .main-btn, .font {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text p, .text-box p {
+    font-size: 1.5rem;
+  }
+  .main-btn, .font {
+    font-size: 0.875rem;
+  }
+  .container-box, .bottom .container-box {
+    width: 100%;
+  }
 }
