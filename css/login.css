@@ -48,3 +48,41 @@ form {
     gap: 1rem;
 }
 
+label {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+input {
+    height: 5.6rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    background-color: var(--gray100);
+}
+
+button {
+    color: var(--gray100);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 12.4rem;
+    border-radius: 4rem;
+    background-color: var(--blue100);
+}
+
+.easy-login {
+
+    background-color: #E6F2FF;
+    border-radius: 0.8rem;
+}
+
+.easy-login-box {
+    margin: 1.6rem 2.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.easy-login-box p {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
