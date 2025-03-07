@@ -31,7 +31,7 @@ button:disabled {
 main {
     height: 61.8rem;
     width: 0 auto;
-    margin-top: 20rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
