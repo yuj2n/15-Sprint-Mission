@@ -1,11 +1,32 @@
 /* 전체적인 세팅 */
-html {
+html, body {
   margin: 0;
   padding: 0;
-  top: 0;
-  bottom: 0;
+  height: 100%;
   font-family: "Pretendard Variable", sans-serif;
   font-size: 10px; /* Base font size */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+article, section {
+  flex: 1;
 }
 
 .main-btn,
