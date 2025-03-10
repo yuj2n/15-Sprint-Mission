@@ -57,19 +57,12 @@ form {
 
 .password-container {
     position: relative;
-    width: 100%;  /* 부모 요소 크기 맞추기 */
-    min-width: 64rem; /* 최소 크기 설정 */
 }
 
 .password-container input {
     width: 100%;  /* input이 가득 차도록 */
-    font-size: 1.6rem;
-    height: 5.6rem;
-    padding: 2rem;
     padding-right: 4rem; /* 아이콘과 텍스트 간 간격 확보 */
-    border-radius: 1.2rem;
-    background-color: var(--gray100);
-    box-sizing: border-box;  /* 패딩이 width에 포함되도록 설정 */
+    box-sizing: border-box; /* 패딩이 width에 포함되도록 설정 */
 }
 
 .eye-icon {
