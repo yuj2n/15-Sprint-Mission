@@ -31,9 +31,13 @@
         </div>
         <div class="login-input">
           <label for="password">비밀번호</label>
-          <div style="position: relative;"></div>
-            <input type="password" id="password" style="padding-right: 30px;" />
-            <img src="images/eye-icon.png" width="20" height="20" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor: pointer;" onclick="togglePasswordVisibility()" />
+          <div class="password-container">
+            <input type="password" id="password" />
+            <img
+              src="images/invisible-eye-icon.png"
+              class="eye-icon"
+              onclick="togglePasswordVisibility()"
+            />
           </div>
         </div>
         <button type="submit">로그인</button> 
