@@ -1,0 +1,413 @@
+/* 전체적인 세팅 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Pretendard Variable", sans-serif;
+  font-size: 10px; /* Base font size */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+article, section {
+  flex: 1;
+}
+
+.main-btn,
+button {
+  cursor: pointer;
+}
+
+.main-btn:hover,
+button:hover {
+  background: var(--blue200);
+}
+
+.main-btn:active,
+button:active {
+  background: var(--blue300);
+}
+
+.main-btn:disabled,
+button:disabled {
+  background: var(--inactive);
+}
+
+/* 상단바 */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.nav {
+  background: var(--white);
+  width: 100%;
+  height: 7rem;
+  margin: 0 auto;
+  padding: 0.9rem 10%;
+  gap: 1rem;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.nav-content {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 15rem;
+  height: 5rem;
+}
+
+.login {
+  color: var(--white);
+  background: var(--blue100);
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 13rem;
+  height: 5rem;
+  padding: 1.4rem 2.3rem;
+  gap: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+/* main banner */
+article {
+  background: var(--banner);
+  margin: 0 auto;
+  width: 100%;
+  height: 54rem;
+}
+
+.banner {
+  width: 100%;
+  height: 54rem;
+  background: var(--banner);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  height: 34rem;
+  top: 20rem;
+  left: 10%;
+  gap: 0.7rem;
+}
+
+.container-box {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 26rem;
+  gap: 3.2rem;
+  padding-bottom: 6rem;
+}
+
+.text p {
+  font-weight: 700;
+  color: var(--gray700);
+  font-size: 4rem;
+  line-height: 5.6rem;
+}
+
+.main-btn {
+  display: flex;
+  background: var(--blue100);
+  width: 36rem;
+  height: 5.6rem;
+  gap: 1rem;
+  padding: 1.6rem 12.4rem;
+  border: none;
+  border-radius: 4rem;
+}
+
+.font {
+  color: var(--gray50);
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* main section */
+section {
+  background: var(--white);
+  margin: 0 auto;
+  width: 100%;
+  height: 72rem;
+  top: 7rem;
+}
+
+.section {
+  padding: 13.8rem 10%;
+}
+
+.content {
+  background: var(--gray);
+  display: flex;
+  width: 80%;
+  height: 44.4rem;
+  margin: 0 auto;
+  border-radius: 1.2rem;
+  gap: 6.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 23.8rem;
+  padding-right: 2.4rem;
+  gap: 1.2rem;
+}
+
+.content-box p {
+  color: var(--blue100);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20rem;
+  gap: 2.4rem;
+}
+
+h3 {
+  width: 100%;
+  height: 11.2rem;
+  color: var(--gray700);
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 5.6rem;
+  letter-spacing: 2%;
+}
+
+.text-box .info {
+  color: var(--gray700);
+  width: 100%;
+  height: 6.4rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+.reverse {
+  text-align: right;
+}
+
+.reverse .text-box {
+  width: 100%;
+  height: 20rem;
+}
+
+.reverse p {
+  width: 100%;
+  height: 11.2rem;
+}
+
+.reverse .info {
+  width: 100%;
+}
+
+.icon-img {
+  height: auto;
+}
+
+.register .content-box {
+  width: 30%;
+  height: 23.8rem;
+}
+
+.register p {
+  width: 100%;
+  height: 11.2rem;
+}
+
+.register .info {
+  width: 100%;
+  height: 6.4rem;
+}
+
+/* section banner */
+.bottom.banner::before { /* 배경색 */
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10rem;
+  background-color: var(--gray);
+  position: absolute; /* relative에서 absolute로 변경 */
+    top: 0; /* 밀리지 않도록 변경 */
+    left: 0;
+}
+
+.bottom.banner {
+  position: relative;
+}
+
+.content-box {
+  height: 19.2rem;
+  background: var(--gray);
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 23.8rem;
+  padding-right: 2.4rem;
+  gap: 1.2rem;
+}
+
+.bottom .container {
+  top: 14rem;
+  left: 10%;
+  width: 80%;
+  height: 40rem;
+}
+
+.bottom p {
+  height: 11.2rem;
+}
+
+/* footer */
+footer {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: 16rem;
+  color: var(--gray200);
+  background-color: var(--gray900);
+}
+
+.nav-bottom {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  color: var(--gray400);
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  width: 16rem;
+  height: 1.9rem;
+  gap: 3rem;
+  text-align: center;
+}
+
+.policy {
+  width: 10rem;
+  height: 1.9rem;
+}
+
+.faq {
+  width: 2.8rem;
+  height: 1.9rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 11.6rem;
+  height: 2em;
+  gap: 1.2rem;
+}
+
+li, ul {
+  list-style: none;
+}
+
+a {
+  color: var(--gray200);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container,
+  .bottom .container {
+    width: 90%;
+    left: 5%;
+  }
+  .section,
+  .nav-bottom {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .bottom .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-box,
+  .bottom .container-box {
+    width: 80%;
+  }
+  .text p,
+  .text-box p {
+    font-size: 3.2rem;
+  }
+  .main-btn,
+  .font {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text p,
+  .text-box p {
+    font-size: 2.4rem;
+  }
+  .main-btn,
+  .font {
+    font-size: 1.4rem;
+  }
+  .container-box,
+  .bottom .container-box {
+    width: 100%;
+  }
+  .text-box p {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .text-box .info {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}

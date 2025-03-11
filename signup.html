@@ -15,19 +15,22 @@
     <link rel="icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/login.css" />
     <title>로그인</title>
   </head>
   <body>
     <main>
-        <a href="/">
-          <img src="images/pandamarket.png" width="396" height="132" />
-        </a>
+      <a href="/">
+        <img src="images/pandamarket.png" width="396" height="132" />
+      </a>
       <form>
-        <div class="login-input email">
+        <div class="login-input">
           <label for="email">이메일</label>
           <input type="email" id="email" />
+        </div>
+        <div class="login-input">
+          <label for="nickname">닉네임</label>
+          <input type="text" id="nickname" />
         </div>
         <div class="login-input">
           <label for="password">비밀번호</label>
@@ -40,7 +43,18 @@
             />
           </div>
         </div>
-        <button type="submit">로그인</button> 
+        <div class="login-input">
+          <label for="password-check">비밀번호 확인</label>
+          <div class="password-container">
+            <input type="password" id="password-check" />
+            <img
+              src="images/eye-icon.png"
+              class="eye-icon"
+              onclick="togglePasswordVisibility()"
+            />
+          </div>
+        </div>
+        <button type="submit">회원가입</button>
         <div class="easy-login">
           <div class="easy-login-box">
             <p>간편 로그인하기</p>
@@ -50,8 +64,10 @@
             </div>
           </div>
         </div>
+        <p>
+          이미 회원이신가요?&nbsp;<a class="login" href="/login.html">로그인</a>
+        </p>
       </form>
-      <p>판다마켓이 처음이신가요?&nbsp;<a class="signup" href="/signup.html">회원가입</span></p>
     </main>
   </body>
 </html>

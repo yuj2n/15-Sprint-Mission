@@ -1,36 +1,12 @@
 /* 전체 초기화 */
 * {
-  top: 0;
-  bottom: 0;
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: "Pretendard Variable", sans-serif;
-  font-size: 16px; /* Base font size */
 }
 
 /* 기본 스타일 초기화 */
 a {
   text-decoration: none;
-}
-
-.main-btn,
-button {
-  cursor: pointer;
-}
-
-.main-btn:hover,
-button:hover {
-  background: var(--blue200);
-}
-
-.main-btn:active,
-button:active {
-  background: var(--blue300);
-}
-
-.main-btn:disabled,
-button:disabled {
-  background: var(--inactive);
 }
