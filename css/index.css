@@ -1,12 +1,3 @@
-/* 전체적인 세팅 */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Pretendard Variable", sans-serif;
-  font-size: 10px; /* Base font size */
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -260,16 +251,10 @@ h3 {
 }
 
 /* section banner */
-.bottom.banner::before { /* 배경색 */
-  content: "";
-  display: block;
-  width: 100%;
-  height: 10rem;
+.bottom-banner {
+  padding-top: 15rem;
   background-color: var(--gray);
-  position: absolute; /* relative에서 absolute로 변경 */
-    top: 0; /* 밀리지 않도록 변경 */
-    left: 0;
-}
+} 
 
 .bottom.banner {
   position: relative;
