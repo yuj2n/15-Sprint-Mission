@@ -31,7 +31,7 @@ button:disabled {
 main {
     height: 61.8rem;
     width: 0 auto;
-    margin-top: 5rem;
+    margin-top: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,4 +139,9 @@ main p {
 main p a {
     text-decoration: underline;
     color: var(--blue100);
+}
+
+.signup, .login {
+    font-size: 1.4rem;
+    font-weight: 500;   
 }
