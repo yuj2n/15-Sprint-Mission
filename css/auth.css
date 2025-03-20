@@ -128,7 +128,7 @@ button {
     gap: 1.6rem;
 }
 
-main p {
+.question {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
@@ -136,7 +136,7 @@ main p {
     font-weight: 500;
 }
 
-main p a {
+.question a {
     text-decoration: underline;
     color: var(--blue100);
 }
