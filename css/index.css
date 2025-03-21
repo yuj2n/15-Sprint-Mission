@@ -16,7 +16,8 @@ main {
   flex-direction: column;
 }
 
-article, section {
+article,
+section {
   flex: 1;
 }
 
@@ -169,6 +170,7 @@ section {
   background: var(--gray);
   display: flex;
   height: 44.4rem;
+  width: 105rem;
   margin: 0 auto;
   border-radius: 1.2rem;
   gap: 6.4rem;
@@ -180,12 +182,9 @@ section {
 .content-box {
   display: flex;
   flex-direction: column;
-  width: 30%;
   height: 23.8rem;
   padding-right: 2.4rem;
   gap: 1.2rem;
-  flex-shrink: 0; /* Prevent shrinking */
-  min-width: 300px; /* Set a minimum width */
 }
 
 .content-box p {
@@ -212,9 +211,15 @@ h3 {
   letter-spacing: 2%;
 }
 
+.text-box span {
+  color: var(--gray700);
+  font-weight: 700;
+  font-size: 4rem;
+  display: block;
+}
+
 .hot {
   width: 22.2rem;
-  flex-wrap: wrap;
 }
 
 .text-box .info {
@@ -259,15 +264,15 @@ h3 {
 }
 
 .register .info {
-  width: 100%;
-  height: 6.4rem;
+  font-size: 2.4rem;
+  width: 33.5rem;
 }
 
 /* section banner */
 .bottom-banner {
   padding-top: 15rem;
   background-color: var(--gray);
-} 
+}
 
 .bottom.banner {
   position: relative;
@@ -317,8 +322,6 @@ footer {
 
 .left {
   color: var(--gray400);
-  font-weight: 400;
-  font-size: 1.6rem;
   text-align: center;
 }
 
@@ -328,6 +331,11 @@ footer {
   height: 1.9rem;
   gap: 3rem;
   text-align: center;
+}
+
+.codeit {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 .policy {
@@ -340,6 +348,12 @@ footer {
   height: 1.9rem;
 }
 
+.policy a,
+.faq a {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .icon {
   display: flex;
   align-items: center;
@@ -348,7 +362,8 @@ footer {
   gap: 1.2rem;
 }
 
-li, ul {
+li,
+ul {
   list-style: none;
 }
 
@@ -385,45 +400,77 @@ a {
     align-items: center;
     min-width: 300px; /* Ensure minimum width in tablet view */
   }
-  h3 {
-    display: inline;
-  }
+
   .text-box h3,
+  .text-box span,
   .text-box p {
     font-size: 3.2rem;
   }
-  .nav { /* 상단 바 좌우 여백 */
+  .nav {
+    /* 상단 바 좌우 여백 */
     padding: 0.9rem 1.5rem;
   }
-  .banner { /*  */
-    height:  80rem;
+  .banner {
+    /* 상단 배너 높이 */
+    height: 80rem;
   }
-  
   .panda {
+    /* 판다 이미지 위치 */
     position: absolute;
     top: 26rem;
   }
   .section {
-    margin-top: 10rem;
+    margin: 12rem 0;
   }
-  .banner-img {
+  .section-img {
     width: 70rem;
     height: 100rem;
+  }
+  .content,
+  .content-box {
+    width: 0;
+    background: white;
+  }
+  .hot {
+    /* 섹션 제목 글자 길이 */
+    width: 32.9rem;
+  }
+  .title {
+    width: 41rem;
+  }
+  .text-box span {
+    display: inline;
+  }
+  /* 섹션 내용 글자 넘김 */
+  #check {
+    font-size: 1.8rem;
+    width: 20.6rem;
+  }
+  #find {
+    font-size: 1.8rem;
+    width: 21.6rem;
+  }
+  #recommend {
+    font-size: 1.8rem;
+    width: 25.1rem;
   }
   .bottom-banner {
     padding-top: 12rem;
     background-color: var(--banner);
-  } 
+  }
   .bottom .container-box {
     margin-bottom: 14.2rem;
   }
   .bottom .container {
     top: 24rem;
   }
+  .codeit {
+    color: var(--gray200);
+  }
 }
 
 /* Mobile: 375px 이상 ~ 767px 이하  */
-@media (min-width: 374px) and (max-width: 767px){
+@media (min-width: 374px) and (max-width: 767px) {
   .text p,
   .text-box p {
     font-size: 2.4rem;
