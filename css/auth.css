@@ -1,9 +1,5 @@
 /* 전체적인 세팅 */
 html {
-  margin: 0;
-  padding: 0;
-  top: 0;
-  bottom: 0;
   font-family: "Pretendard Variable", sans-serif;
   font-size: 10px; /* Base font size */
 }
