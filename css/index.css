@@ -235,32 +235,9 @@ h3 {
   text-align: right;
 }
 
-.reverse .text-box {
-  width: 100%;
-  height: 20rem;
-}
-
-.reverse p {
-  width: 100%;
-  height: 11.2rem;
-}
-
-.reverse .info {
-  width: 100%;
-}
-
-.icon-img {
-  height: auto;
-}
-
 .register .content-box {
   width: 30%;
   height: 23.8rem;
-}
-
-.register p {
-  width: 100%;
-  height: 11.2rem;
 }
 
 .register .info {
@@ -393,14 +370,23 @@ a {
     flex-direction: column;
     align-items: center;
   }
+  #opposite { /* 2번째 섹션 내용 반대 순서 */
+    flex-direction: column-reverse;
+  }
   .container-box {
     width: 90%;
     margin-bottom: 30rem;
     display: flex;
-    align-items: center;
-    min-width: 300px; /* Ensure minimum width in tablet view */
+    align-items: center; 
   }
-
+  .content-box {
+    align-self: flex-end; /* Ensure left alignment */
+    text-align: left; /* Align text to the left */
+  }
+  #opposite .content-box {
+    align-self: flex-start; /* Ensure left alignment */
+    text-align: right; /* Align text to the left */
+  }
   .text-box h3,
   .text-box span,
   .text-box p {
@@ -413,6 +399,9 @@ a {
   .banner {
     /* 상단 배너 높이 */
     height: 80rem;
+  }
+  h3 { /* 배너 제목 글자 넘김 X */
+    display: inline;
   }
   .panda {
     /* 판다 이미지 위치 */
