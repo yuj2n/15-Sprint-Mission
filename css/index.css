@@ -66,9 +66,10 @@ header {
   justify-content: space-between;
 }
 
-.logo {
-  width: 15rem;
-  height: 5rem;
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .login {
@@ -145,6 +146,11 @@ article {
   text-decoration: none;
 }
 
+.panda {
+  width: 74.6rem;
+  height: 34rem;
+}
+
 /* main section */
 section {
   background: var(--white);
@@ -155,19 +161,20 @@ section {
 }
 
 .section {
-  padding: 13.8rem 10%;
+  display: flex;
+  padding: 13.8rem 0;
 }
 
 .content {
   background: var(--gray);
   display: flex;
-  width: 80%;
   height: 44.4rem;
   margin: 0 auto;
   border-radius: 1.2rem;
   gap: 6.4rem;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .content-box {
@@ -177,6 +184,8 @@ section {
   height: 23.8rem;
   padding-right: 2.4rem;
   gap: 1.2rem;
+  flex-shrink: 0; /* Prevent shrinking */
+  min-width: 300px; /* Set a minimum width */
 }
 
 .content-box p {
@@ -196,12 +205,16 @@ section {
 
 h3 {
   width: 100%;
-  height: 11.2rem;
   color: var(--gray700);
   font-weight: 700;
   font-size: 4rem;
   line-height: 5.6rem;
   letter-spacing: 2%;
+}
+
+.hot {
+  width: 22.2rem;
+  flex-wrap: wrap;
 }
 
 .text-box .info {
@@ -269,6 +282,8 @@ h3 {
   height: 23.8rem;
   padding-right: 2.4rem;
   gap: 1.2rem;
+  flex-shrink: 0; /* Prevent shrinking */
+  min-width: 300px; /* Set a minimum width */
 }
 
 .bottom .container {
@@ -342,7 +357,8 @@ a {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1199px) and (min-width: 768px) {
+/* Desktop: 1200px 이상 */
+@media (min-width: 1200px) {
   .container,
   .bottom .container {
     width: 90%;
@@ -354,27 +370,60 @@ a {
   }
 }
 
-@media (max-width: 767px) and (min-width: 375px) {
+/* Tablet: 768px 이상 ~ 1199px 이하 */
+@media (min-width: 768px) and (max-width: 1199px) {
   .container,
-  .bottom .container {
+  .bottom .container,
+  .content {
     flex-direction: column;
     align-items: center;
   }
-  .container-box,
-  .bottom .container-box {
-    width: 80%;
+  .container-box {
+    width: 90%;
+    margin-bottom: 30rem;
+    display: flex;
+    align-items: center;
+    min-width: 300px; /* Ensure minimum width in tablet view */
   }
-  .text p,
+  h3 {
+    display: inline;
+  }
+  .text-box h3,
   .text-box p {
     font-size: 3.2rem;
   }
-  .main-btn,
-  .font {
-    font-size: 1.6rem;
+  .nav { /* 상단 바 좌우 여백 */
+    padding: 0.9rem 1.5rem;
+  }
+  .banner { /*  */
+    height:  80rem;
+  }
+  
+  .panda {
+    position: absolute;
+    top: 26rem;
+  }
+  .section {
+    margin-top: 10rem;
+  }
+  .banner-img {
+    width: 70rem;
+    height: 100rem;
+  }
+  .bottom-banner {
+    padding-top: 12rem;
+    background-color: var(--banner);
+  } 
+  .bottom .container-box {
+    margin-bottom: 14.2rem;
+  }
+  .bottom .container {
+    top: 24rem;
   }
 }
 
-@media (max-width: 374px) {
+/* Mobile: 375px 이상 ~ 767px 이하  */
+@media (min-width: 374px) and (max-width: 767px){
   .text p,
   .text-box p {
     font-size: 2.4rem;
@@ -386,6 +435,7 @@ a {
   .container-box,
   .bottom .container-box {
     width: 100%;
+    min-width: 300px; /* Ensure minimum width in mobile view */
   }
   .text-box p {
     font-size: 2.4rem;
@@ -394,5 +444,9 @@ a {
   .text-box .info {
     font-size: 1.6rem;
     line-height: 2.4rem;
+  }
+
+  .nav {
+    padding: 0.9rem 1rem;
   }
 }
