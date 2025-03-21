@@ -163,7 +163,7 @@ section {
 
 .section {
   display: flex;
-  padding: 13.8rem 0;
+  padding: 10rem 0;
 }
 
 .content {
@@ -197,7 +197,6 @@ section {
 .text-box {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 20rem;
   gap: 2.4rem;
 }
@@ -224,7 +223,6 @@ h3 {
 
 .text-box .info {
   color: var(--gray700);
-  width: 100%;
   height: 6.4rem;
   font-weight: 500;
   font-size: 2.4rem;
@@ -273,10 +271,6 @@ h3 {
   left: 10%;
   width: 80%;
   height: 40rem;
-}
-
-.bottom p {
-  height: 11.2rem;
 }
 
 /* footer */
@@ -366,12 +360,17 @@ a {
 @media (min-width: 768px) and (max-width: 1199px) {
   .container,
   .bottom .container,
-  .content {
+  .content { /* 컨텐츠 배열 */
     flex-direction: column;
     align-items: center;
   }
-  #opposite { /* 2번째 섹션 내용 반대 순서 */
-    flex-direction: column-reverse;
+  /* 상단바 */
+  .nav { /* 상단 바 좌우 여백 */
+    padding: 0.9rem 1.5rem;
+  }
+  /* 상단 배너 */
+  .banner {
+    height: 80rem;
   }
   .container-box {
     width: 90%;
@@ -379,35 +378,14 @@ a {
     display: flex;
     align-items: center; 
   }
-  .content-box {
-    align-self: flex-end; /* Ensure left alignment */
-    text-align: left; /* Align text to the left */
-  }
-  #opposite .content-box {
-    align-self: flex-start; /* Ensure left alignment */
-    text-align: right; /* Align text to the left */
-  }
-  .text-box h3,
-  .text-box span,
-  .text-box p {
-    font-size: 3.2rem;
-  }
-  .nav {
-    /* 상단 바 좌우 여백 */
-    padding: 0.9rem 1.5rem;
-  }
-  .banner {
-    /* 상단 배너 높이 */
-    height: 80rem;
-  }
   h3 { /* 배너 제목 글자 넘김 X */
     display: inline;
   }
   .panda {
-    /* 판다 이미지 위치 */
     position: absolute;
     top: 26rem;
   }
+  /* 섹션 */
   .section {
     margin: 12rem 0;
   }
@@ -420,18 +398,34 @@ a {
     width: 0;
     background: white;
   }
-  .hot {
-    /* 섹션 제목 글자 길이 */
+  .hot { /* 섹션 제목 글자 길이 */
     width: 32.9rem;
   }
-  .title {
+  .reverse-span {
     width: 41rem;
   }
   .text-box span {
     display: inline;
   }
-  /* 섹션 내용 글자 넘김 */
-  #check {
+  .reverse .text-box {
+    align-self: flex-start;
+    text-align: right;
+    padding: 0 6.5rem;
+  }
+  h3.title {
+    width: 45rem;
+  }
+  h3.title.reverse {
+    position: relative;
+    right: 22rem;
+    margin-right: 10rem;
+  }
+  .text-box h3,
+  .text-box span,
+  .text-box p { /* 섹션 제목 글자 크기 */
+    font-size: 3.2rem;
+  }
+  #check { /* 섹션 내용 글자 넘김 */
     font-size: 1.8rem;
     width: 20.6rem;
   }
@@ -443,6 +437,18 @@ a {
     font-size: 1.8rem;
     width: 25.1rem;
   }
+  #opposite { /* 2번째 섹션 내용 반대 순서 */
+    flex-direction: column-reverse;
+  }
+  .content-box {
+    align-self: flex-end; /* Ensure left alignment */
+    text-align: left; /* Align text to the left */
+  }
+  .reverse.content-box {
+    align-self: flex-start; /* Ensure left alignment */
+    text-align: right; /* Align text to the left */
+  }
+  /* 하단 배너 */
   .bottom-banner {
     padding-top: 12rem;
     background-color: var(--banner);
@@ -453,6 +459,10 @@ a {
   .bottom .container {
     top: 24rem;
   }
+  .trade {
+    display: flex;
+    justify-content: center;
+  }
   .codeit {
     color: var(--gray200);
   }
@@ -460,29 +470,135 @@ a {
 
 /* Mobile: 375px 이상 ~ 767px 이하  */
 @media (min-width: 374px) and (max-width: 767px) {
-  .text p,
-  .text-box p {
-    font-size: 2.4rem;
-  }
-  .main-btn,
-  .font {
-    font-size: 1.4rem;
-  }
-  .container-box,
-  .bottom .container-box {
-    width: 100%;
-    min-width: 300px; /* Ensure minimum width in mobile view */
-  }
   .text-box p {
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
+  .container,
+  .bottom .container,
+  .content { /* 컨텐츠 배열 */
+    flex-direction: column;
+    align-items: center;
+  }
+  /* 상단바 */
+  .nav { /* 상단 바 좌우 여백 */
+    padding: 0.9rem 1rem;
+  }
+  /* 상단 배너 */
+  .text h3 {
+    width: 24rem;
+    font-size: 3.2rem;
+    display: flex;
+    justify-content: center;
+  }
+  /* 버튼 조정 */
+  .main-btn {
+    width: 24rem;
+    padding: 1.6rem 7rem;
+  }
+  .font {
+    font-size: 1.8rem;
+  }
+  .banner {
+    height: 54rem;
+  }
+  .container-box {
+    width: 90%;
+    margin-bottom: 40rem;
+    display: flex;;
+    align-items: center; 
+  } 
+  h3 { /* 배너 제목 글자 넘김 X */
+    display: inline;
+  }
+  .panda {
+    width: 44.8rem;
+    height: 20.4rem;
+    position: absolute;
+    top: 13.6rem;
+  }
+  /* 섹션 */
+  .section {
+    padding: 4rem 0;
+  }
+  .section.top {
+    margin-top: 5rem;
+  }
+  .section-img {
+    width: 34.4rem;
+    height: 25.9rem;
+  }
+  .content {
+    gap: 3rem;
+  }
+  .content,
+  .content-box {
+    width: 34.4rem;
+    background: white;
+  }
+  .hot { /* 섹션 제목 글자 길이 */
+    width: 32.9rem;
+  }
   .text-box .info {
     font-size: 1.6rem;
-    line-height: 2.4rem;
   }
-
-  .nav {
-    padding: 0.9rem 1rem;
+  .text-box span {
+    display: inline;
+  }
+  .reverse-span {
+    width: 41rem;
+  }
+  .reverse .text-box {
+    align-self: flex-start;
+    text-align: right;
+    padding: 0 10rem;
+  }
+  h3.title {
+    width: 45rem;
+  }
+  h3.title.reverse {
+    position: relative;
+    right: 22rem;
+    margin-right: 10rem;
+  }
+  .text-box h3,
+  .text-box span {
+    font-size: 2.4rem;
+  }
+  .text-box {
+    gap: 0.5rem;
+  }
+  .content-box p { /* 섹션 제목 글자 크기 */
+    font-size: 1.6rem;
+  }
+  #find {
+    width: 21.6rem;
+  }
+  #opposite { /* 2번째 섹션 내용 반대 순서 */
+    flex-direction: column-reverse;
+  }
+  .content-box {
+    text-align: left; /* Align text to the left */
+  }
+  .reverse.content-box {
+    text-align: right; /* Align text to the left */
+  }
+  /* 하단 배너 */
+  .bottom-banner {
+    padding-top: 12rem;
+    background-color: var(--banner);
+  }
+  .bottom .container-box {
+    margin-bottom: 14.2rem;
+  }
+  .bottom .container {
+    top: 24rem;
+  }
+  .trade {
+    display: flex;
+    justify-content: center;
+  }
+  .codeit {
+    color: var(--gray200);
   }
 }
