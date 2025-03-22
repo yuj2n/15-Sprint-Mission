@@ -113,6 +113,7 @@ input::placeholder {
 }
 
 .easy-login {
+  width: 64rem;
   margin: 2.4rem 0;
   background-color: #e6f2ff;
   border-radius: 0.8rem;
@@ -157,29 +158,28 @@ input::placeholder {
 
 /* Mobile: 767px 이하  */
 @media (max-width: 767px) {
-    main {
-        width: 100%;
-        max-width: 40rem; /* 최대 너비 400px */
-        padding: 0 1.6rem; /* 좌우 여백 16px */
-    }
-    .logo-box {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-    form {
-        margin-top: 0;
-        width: 100%; /* 부모(main)의 너비를 따름 */
-    }
-    .logo {
-        width: 5.2rem; /* 로고 크기 줄이기 */
-        height: auto;
-    }
-    .pandamarket {
-        width: 13.3rem; /* 텍스트 로고 크기 조절 */
-        height: auto;
-    }
+  main {
+    width: 100%;
+    max-width: 40rem; /* 최대 너비 400px */
+    padding: 0 1.6rem; /* 좌우 여백 16px */
+  }
+  .logo-box {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    margin-top: 0;
+    width: 100%; /* 부모(main)의 너비를 따름 */
+  }
+  .logo {
+    width: 5.2rem; /* 로고 크기 줄이기 */
+    height: auto;
+  }
+  .pandamarket {
+    width: 13.3rem; /* 텍스트 로고 크기 조절 */
+    height: auto;
+  }
 }
