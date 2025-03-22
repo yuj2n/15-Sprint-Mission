@@ -360,12 +360,14 @@ a {
 @media (min-width: 768px) and (max-width: 1199px) {
   .container,
   .bottom .container,
-  .content { /* 컨텐츠 배열 */
+  .content {
+    /* 컨텐츠 배열 */
     flex-direction: column;
     align-items: center;
   }
   /* 상단바 */
-  .nav { /* 상단 바 좌우 여백 */
+  .nav {
+    /* 상단 바 좌우 여백 */
     padding: 0.9rem 1.5rem;
   }
   /* 상단 배너 */
@@ -376,9 +378,10 @@ a {
     width: 90%;
     margin-bottom: 30rem;
     display: flex;
-    align-items: center; 
+    align-items: center;
   }
-  h3 { /* 배너 제목 글자 넘김 X */
+  h3 {
+    /* 배너 제목 글자 넘김 X */
     display: inline;
   }
   .panda {
@@ -398,7 +401,8 @@ a {
     width: 0;
     background: white;
   }
-  .hot { /* 섹션 제목 글자 길이 */
+  .hot {
+    /* 섹션 제목 글자 길이 */
     width: 32.9rem;
   }
   .reverse-span {
@@ -422,10 +426,12 @@ a {
   }
   .text-box h3,
   .text-box span,
-  .text-box p { /* 섹션 제목 글자 크기 */
+  .text-box p {
+    /* 섹션 제목 글자 크기 */
     font-size: 3.2rem;
   }
-  #check { /* 섹션 내용 글자 넘김 */
+  #check {
+    /* 섹션 내용 글자 넘김 */
     font-size: 1.8rem;
     width: 20.6rem;
   }
@@ -437,7 +443,8 @@ a {
     font-size: 1.8rem;
     width: 25.1rem;
   }
-  #opposite { /* 2번째 섹션 내용 반대 순서 */
+  #opposite {
+    /* 2번째 섹션 내용 반대 순서 */
     flex-direction: column-reverse;
   }
   .content-box {
@@ -447,6 +454,9 @@ a {
   .reverse.content-box {
     align-self: flex-start; /* Ensure left alignment */
     text-align: right; /* Align text to the left */
+  }
+  .content-box {
+    min-width: 32rem;
   }
   /* 하단 배너 */
   .bottom-banner {
@@ -463,6 +473,7 @@ a {
     display: flex;
     justify-content: center;
   }
+  /* footer */
   .codeit {
     color: var(--gray200);
   }
@@ -476,12 +487,14 @@ a {
   }
   .container,
   .bottom .container,
-  .content { /* 컨텐츠 배열 */
+  .content {
+    /* 컨텐츠 배열 */
     flex-direction: column;
     align-items: center;
   }
   /* 상단바 */
-  .nav { /* 상단 바 좌우 여백 */
+  .nav {
+    /* 상단 바 좌우 여백 */
     padding: 0.9rem 1rem;
   }
   /* 상단 배너 */
@@ -499,16 +512,14 @@ a {
   .font {
     font-size: 1.8rem;
   }
-  .banner {
-    height: 54rem;
-  }
   .container-box {
     width: 90%;
     margin-bottom: 40rem;
-    display: flex;;
-    align-items: center; 
-  } 
-  h3 { /* 배너 제목 글자 넘김 X */
+    display: flex;
+    align-items: center;
+  }
+  h3 {
+    /* 배너 제목 글자 넘김 X */
     display: inline;
   }
   .panda {
@@ -536,7 +547,8 @@ a {
     width: 34.4rem;
     background: white;
   }
-  .hot { /* 섹션 제목 글자 길이 */
+  .hot {
+    /* 섹션 제목 글자 길이 */
     width: 32.9rem;
   }
   .text-box .info {
@@ -568,13 +580,15 @@ a {
   .text-box {
     gap: 0.5rem;
   }
-  .content-box p { /* 섹션 제목 글자 크기 */
+  .content-box p {
+    /* 섹션 제목 글자 크기 */
     font-size: 1.6rem;
   }
   #find {
     width: 21.6rem;
   }
-  #opposite { /* 2번째 섹션 내용 반대 순서 */
+  #opposite {
+    /* 2번째 섹션 내용 반대 순서 */
     flex-direction: column-reverse;
   }
   .content-box {
@@ -583,22 +597,55 @@ a {
   .reverse.content-box {
     text-align: right; /* Align text to the left */
   }
+  .content-box {
+    min-width: 32rem;
+  }
   /* 하단 배너 */
   .bottom-banner {
-    padding-top: 12rem;
+    padding-top: 0;
     background-color: var(--banner);
   }
   .bottom .container-box {
-    margin-bottom: 14.2rem;
+    margin-bottom: 25rem;
   }
   .bottom .container {
-    top: 24rem;
+    top: 18rem;
   }
-  .trade {
+  .text .trade {
+    width: 24rem;
+    font-size: 3.2rem;
     display: flex;
     justify-content: center;
   }
-  .codeit {
+  .two-panda {
+    position: relative;
+    bottom: 15.3rem;
+    width: 37.5rem;
+    height: 19.8rem;
+  }
+  /* footer */
+  .nav-bottom {
+    padding-top: 1rem;
+    display: grid;
+    justify-items: center; /* 내부 아이템 개별 정렬 */
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "center icon"
+      "left .";
+    gap: 1rem;
+  }
+  .center {
+    grid-area: center;
+  }
+  .icon {
+    float: right;
+    grid-area: icon;
+  }
+  .left {
+    padding-right: 5rem;
     color: var(--gray200);
+    grid-area: left;
   }
 }
