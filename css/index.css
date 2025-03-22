@@ -342,7 +342,6 @@ a {
   color: var(--gray200);
 }
 
-/* Responsive adjustments */
 /* Desktop: 1200px 이상 */
 @media (min-width: 1200px) {
   .container,
