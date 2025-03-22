@@ -1,3 +1,4 @@
+/* 모바일 사이즈 이하 지원 X */
 .unsupported-screen {
     display: none;
     position: fixed;
