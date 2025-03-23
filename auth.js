@@ -56,10 +56,10 @@ function validatePassword() {
 function togglePasswordVisibility(input, button) {
     if (input.type === "password") {
         input.type = "text";
-        button.innerHTML = '<img src="/images/eye-icon.png" class="eye-icon" onclick="togglePasswordVisibility()" alt="eye-off">';
+        button.innerHTML = '<img src="/images/eye-icon.png" class="eye-icon" alt="eye-off">';
     } else {
         input.type = "password";
-        button.innerHTML = '<img src="/images/invisible-eye-icon.png" class="eye-icon" onclick="togglePasswordVisibility()" alt="eye-on">';
+        button.innerHTML = '<img src="/images/invisible-eye-icon.png" class="eye-icon" alt="eye-on">';
     }
 }
 
