@@ -1,3 +1,5 @@
+/* login, signup 공통 */
+
 // 이메일 유효성 검사 함수
 function emailValidation(email) {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -9,12 +11,11 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const emailErr = document.getElementById("emailErr");
 const passwordErr = document.getElementById("passwordErr");
-const loginButton = document.querySelector(".btn");
+const passwordVisibility = document.getElementById("passwordVisibility");
 
-// 이메일 검증 함수
+// 이메일 검증 
 function validateEmail() {
     const emailValue = emailInput.value.trim();
-
     if (emailValue === "") {
         emailErr.textContent = "이메일을 입력해주세요.";
         emailInput.classList.add("error-input");
@@ -25,13 +26,12 @@ function validateEmail() {
         emailErr.textContent = "";
         emailInput.classList.remove("error-input");
     }
-    toggleLoginButton();
+    toggleButton();
 }
 
-// 비밀번호 검증 함수
+// 비밀번호 검증
 function validatePassword() {
     const passwordValue = passwordInput.value.trim();
-
     if (passwordValue === "") {
         passwordErr.textContent = "비밀번호를 입력해주세요.";
         passwordInput.classList.add("error-input");
@@ -42,39 +42,22 @@ function validatePassword() {
         passwordErr.textContent = "";
         passwordInput.classList.remove("error-input");
     }
-    toggleLoginButton();
+    toggleButton();
 }
 
-// 로그인 버튼 활성화 함수
-function toggleLoginButton() {
-    if (emailErr.textContent === "" && passwordErr.textContent === "" &&
-        emailInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
-        loginButton.disabled = false;
-        loginButton.classList.add("active");
-    } else {
-        loginButton.disabled = true;
-        loginButton.classList.remove("active");
-    }
-}
 
 // 비밀번호 보이기/숨기기 기능
-function togglePasswordVisibility() {
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
+function togglePasswordVisibility(input, button) {
+    if (input.type === "password") {
+        input.type = "text";
+        button.innerHTML = '<img src="/images/eye-icon.png" class="eye-icon" onclick="togglePasswordVisibility()" alt="eye-off">';
     } else {
-        passwordInput.type = "password";
+        input.type = "password";
+        button.innerHTML = '<img src="/images/invisible-eye-icon.png" class="eye-icon" onclick="togglePasswordVisibility()" alt="eye-on">';
     }
 }
 
 // 이벤트 리스너 추가
 emailInput.addEventListener("focusout", validateEmail);
 passwordInput.addEventListener("focusout", validatePassword);
-
-// 로그인 폼 제출 이벤트
-document.querySelector(".login-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (!loginButton.disabled) {
-        window.location.href = "/items"; // 로그인 성공 시 이동
-    }
-});
-
+passwordVisibility.addEventListener("click", () => togglePasswordVisibility(passwordInput, passwordVisibility));
