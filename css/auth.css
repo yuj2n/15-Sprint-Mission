@@ -102,6 +102,17 @@ input::placeholder {
   color: var(--inactive);
 }
 
+.error-input {
+  border: 2px solid var(--red);
+}
+
+.errMsg {
+  margin-left: 2rem;
+  color: var(--red);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
 .btn {
   height: 5.6rem;
   color: var(--gray100);
