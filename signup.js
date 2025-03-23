@@ -5,7 +5,7 @@ const passwordCheckInput = document.getElementById("password-check");
 const passwordCheckErr = document.getElementById("passwordCheckErr");
 const passwordCheckVisibility = document.getElementById("passwordCheckVisibility");
 
-// signup.js과 auth.js의 중복 변수 재선언
+// signup.js과 auth.js의 중복 변수명 다르게 선언
 const signupEmailInput = document.getElementById("email");
 const signupPasswordInput = document.getElementById("password");
 const signupEmailErr = document.getElementById("emailErr");
