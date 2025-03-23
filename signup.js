@@ -18,9 +18,11 @@ function validateNickname() {
   if (nicknameValue === "") {
     nicknameErr.textContent = "닉네임을 입력해주세요.";
     nicknameInput.classList.add("error-input");
+    nicknameInput.classList.remove("correct-input");
   } else {
     nicknameErr.textContent = "";
     nicknameInput.classList.remove("error-input");
+    nicknameInput.classList.add("correct-input");
   }
   toggleButton();
 }
@@ -33,9 +35,11 @@ function validatePasswordCheck() {
   if (passwordValue !== passwordCheckValue) {
     passwordCheckErr.textContent = "비밀번호가 일치하지 않습니다.";
     passwordCheckInput.classList.add("error-input");
+    passwordCheckInput.classList.remove("correct-input");
   } else {
     passwordCheckErr.textContent = "";
     passwordCheckInput.classList.remove("error-input");
+    passwordCheckInput.classList.add("correct-input");
   }
   toggleButton();
 }

@@ -110,6 +110,10 @@ input::placeholder {
   border: 2px solid var(--red);
 }
 
+.correct-input {
+  border: 2px solid var(--blue100);
+}
+
 .errMsg {
   display: block;
   margin-left: 2rem;

@@ -19,12 +19,15 @@ function validateEmail() {
     if (emailValue === "") {
         emailErr.textContent = "이메일을 입력해주세요.";
         emailInput.classList.add("error-input");
+        emailInput.classList.remove("correct-input");
     } else if (!emailValidation(emailValue)) {
         emailErr.textContent = "잘못된 이메일 형식입니다.";
         emailInput.classList.add("error-input");
+        emailInput.classList.remove("correct-input");
     } else {
         emailErr.textContent = "";
         emailInput.classList.remove("error-input");
+        emailInput.classList.add("correct-input");
     }
     toggleButton();
 }
@@ -35,12 +38,15 @@ function validatePassword() {
     if (passwordValue === "") {
         passwordErr.textContent = "비밀번호를 입력해주세요.";
         passwordInput.classList.add("error-input");
+        passwordInput.classList.remove("correct-input");
     } else if (passwordValue.length < 8) {
         passwordErr.textContent = "비밀번호를 8자 이상 입력해주세요.";
         passwordInput.classList.add("error-input");
+        passwordInput.classList.remove("correct-input");
     } else {
         passwordErr.textContent = "";
         passwordInput.classList.remove("error-input");
+        passwordInput.classList.add("correct-input");
     }
     toggleButton();
 }
