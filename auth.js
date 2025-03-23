@@ -40,6 +40,7 @@ function validatePassword() {
         passwordInput.classList.add("error-input");
     } else {
         passwordErr.textContent = "";
+        passwordInput.classList.remove("error-input");
     }
     toggleLoginButton();
 }
