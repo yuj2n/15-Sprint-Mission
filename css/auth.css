@@ -20,7 +20,7 @@ button:disabled {
 
 main {
   height: 61.8rem;
-  margin: 18rem auto;
+  margin: 22rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,6 +179,7 @@ input::placeholder {
 /* Mobile: 767px 이하  */
 @media (max-width: 767px) {
   main {
+    margin: 15rem auto;
     width: 100%;
     max-width: 40rem; /* 최대 너비 400px */
     padding: 0 1.6rem; /* 좌우 여백 16px */
